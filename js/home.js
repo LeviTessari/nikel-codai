@@ -1,4 +1,4 @@
-const myModal = new bootstrap.Modal("#transections-form");
+const myModal = new bootstrap.Modal("#transection-modal");
 let logged = sessionStorage.getItem('logged');
 const session = localStorage.getItem("session");
 let data = {
@@ -22,12 +22,13 @@ document.getElementById("transections-form").addEventListener("submit", function
     });
 
     saveData(data);
+    
     e.target.reset();
 
     myModal.hide();
-    alert("Lançamento adicionado com sucesso.")
+    alert("Lançamento adicionado com sucesso.");
 
-})
+});
 
 checkLogged();
 
