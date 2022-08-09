@@ -20,7 +20,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <div class="d-flex ">
+                <div class="d-flex menu">
                     <a href="home.html"><button class="btn" type="button"><i class="bi bi-house-door-fill fs-4 color-secondary" ></i></button>
                     </a>
                     <a href="transections.html"><button class="btn" type="button"><i class="bi bi-currency-exchange fs-4" ></i></button>
@@ -28,8 +28,8 @@
                     <div class="dropdown">
                         <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle fs-4" ></i></button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="#">Sair</a></li>    
+                        <ul class="dropdown-menu logout" aria-labelledby="dropdownMenuButton1">
+                          <li><button class="dropdown-item" id="button-logout">Sair</button></li>    
                         </ul>
                       </div>
                 </div>
@@ -100,29 +100,29 @@
                   <h5 class="modal-title" id="exampleModalLabel">Adicionar Lançamento</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form id="trabsections-form">
+                <form id="transections-form">
                     <div  class="modal-body">
                     
                     <div class="mb-3">
                       <label for="value-input" class="form-label">Valor</label>
-                      <input type="number" class="form-control" id="value-input" aria-describedby="emailHelp">
+                      <input type="number" class="form-control" id="value-input" aria-describedby="emailHelp" required>
                              </div>
                     <div class="mb-3">
                       <label for="description-input" class="form-label">Descrição</label>
-                      <input type="text" class="form-control" id="description-input">
+                      <input type="text" class="form-control" id="description-input" required>
                      </div>      
                     <div class="mb-3">
                         <label for="data-input" class="form-label">Data</label>
-                        <input type="date" class="form-control" id="data-input">
+                        <input type="date" class="form-control" id="data-input" required>
                        </div>
                        <div>
                         <div class="mb-3">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="type-input" value="1" checked>
+                                <input class="form-check-input" type="radio" name="type-input" id="inlineRadio1" value="1" checked>
                                 <label class="form-check-label" for="inlineRadio1">Entrada</label>
                               </div>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="type-input" value="2">
+                                <input class="form-check-input" type="radio" name="type-input" id="inlineRadio2" value="2">
                                 <label class="form-check-label" for="inlineRadio2">Saída</label>
                               </div>
                               
