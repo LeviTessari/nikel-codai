@@ -40,7 +40,7 @@
     <main>
         <div class="container-lg">
             <div class="row">
-                <div class="col d-flex mt-4 justify-content-start align-items center">
+                <div class="col d-flex mt-4 justify-content-start align-items-center">
                     <i class="bi bi-cash-coin color-primary icon-detail"></i>
                     <span class="fs-2">R$ 0,00</span>
                 </div>
@@ -115,18 +115,20 @@
                       <input type="text" class="form-control" id="description-input" required>
                      </div>      
                     <div class="mb-3">
-                        <label for="data-input" class="form-label">Data</label>
-                        <input type="date" class="form-control" id="data-input" required>
-                       </div>
-                       <div>
+                        <label for="date-input" class="form-label">Data</label>
+                        <input type="date" class="form-control" id="date-input" required>
+                    </div>
+                    <div>
                         <div class="mb-3">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="tipo-input" id="inlineRadio1" value="1" checked>
                                 <label class="form-check-label" for="inlineRadio1">Entrada</label>
+                                <input class="form-check-input" type="radio" name="type-input" id="inlineRadio1" value="1" checked>
+                               
                               </div>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="tipo-input" id="inlineRadio2" value="2">
                                 <label class="form-check-label" for="inlineRadio2">Saída</label>
+                                <input class="form-check-input" type="radio" name="type-input" id="inlineRadio2" value="2">
+                                
                               </div>
                               
                         </div>
@@ -135,7 +137,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary button-cancel" data-bs-dismiss="modal">Cancelar</button>
-                  <button type="button" class="btn button-default">Adicionar</button>
+                  <button type="submit" class="btn button-default">Adicionar</button>
                 </div>
                 </form>
               </div>
