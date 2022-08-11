@@ -25,6 +25,7 @@ document.getElementById("transaction-form").addEventListener("submit", function(
     
     getCashIn();
     getCashOut();
+    getTotal()
 
     alert("Lançamento adicionado com sucesso.");
   
@@ -48,7 +49,7 @@ function checkLogged(){
     }
     getCashIn();
     getCashOut();
-    
+    getTotal()
 }
 
 function logout(){
@@ -142,6 +143,20 @@ function getCashOut(){
 
   
     
+}
+
+function getTotal(){
+    const transactions = data.transactions;
+    let total = 0
+
+    transactions.forEach((item) =>{
+        if(item.type === "1"){
+            total += item.value
+        }else{
+            total -= item.value
+        }
+    });
+    document.getElementById("total").innerHTML= `R$ ${total.toFixed(2)}`;
 }
 
 function saveData(data){
