@@ -23,7 +23,7 @@ const account = getAccount(email);
             return;
         }
         saveSession(email, checkSession);
-        window.location.href = "home.html"
+        window.location.href = "home.html";
 
     }    
 
@@ -47,8 +47,7 @@ document.getElementById("create-form").addEventListener("submit", function(e){e.
         password: password,
         transactions: []
 
-        }
-    );
+        });
 
     myModal.hide();
     alert("Conta criada com sucesso!");
