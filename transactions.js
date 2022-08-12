@@ -47,6 +47,7 @@ function checkLogged(){
 
 }
 
+
 function logout(){
     sessionStorage.removeItem("logged");
     localStorage.removeItem("session");
