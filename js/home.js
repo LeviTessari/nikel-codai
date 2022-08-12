@@ -6,6 +6,9 @@ let data = {
 };
 
 document.getElementById("button-logout").addEventListener("click", logout);
+document.getElementById("botaotransacao").addEventListener("click", function(){
+    window.location.href = "transections.html";
+});
 
 //Adicionar lançamento
 document.getElementById("transaction-form").addEventListener("submit", function(e){
@@ -25,7 +28,7 @@ document.getElementById("transaction-form").addEventListener("submit", function(
     
     getCashIn();
     getCashOut();
-    getTotal()
+    getTotal();
 
     alert("Lançamento adicionado com sucesso.");
   
@@ -49,7 +52,7 @@ function checkLogged(){
     }
     getCashIn();
     getCashOut();
-    getTotal()
+    getTotal();
 }
 
 function logout(){
