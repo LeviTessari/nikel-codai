@@ -22,8 +22,10 @@ document.getElementById("transaction-form").addEventListener("submit", function(
 
     saveData(data);
     e.target.reset();
-    myModal.hide()
- 
+    myModal.hide();
+    getTransactions();
+
+   
     alert("Lançamento adicionado com sucesso.");
   
 });
@@ -44,6 +46,7 @@ function checkLogged(){
     if(dataUser){
         data = JSON.parse(dataUser);
     }
+    getTransactions();
 
 }
 
@@ -56,4 +59,26 @@ function logout(){
 
 function saveData(data){
     localStorage.setItem(data.login, JSON.stringify(data));
+}
+function getTransactions(){
+    const transactions = data.transactions
+    let transactionsHtml=``;
+
+    if(transactions.length){
+        transactions.forEach((item) =>{
+            let  type = "Entrada";
+            if(item.type == "2"){
+                type = "Sáida";
+            }
+            transactionsHtml += `
+            <tr>
+                <th scope="row">${item.date}</th>
+                <td>${item.value.toFixed(2)}</td>
+                <td>${type}</td>
+                <td>${item.description}</td>
+          </tr>
+          `
+        })
+    }
+    document.getElementById("transactions-list").innerHTML = transactionsHtml;
 }
